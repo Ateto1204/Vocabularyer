@@ -13,7 +13,24 @@ import javax.swing.*;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.util.Pair;
+
+class Pair {
+    private String key;
+    private String value;
+    
+    public Pair(String key, String value) {
+        this.key = key;
+        this.value = value;
+    }
+    
+    public String getKey() {
+        return key;
+    }
+    
+    public String getValue() {
+        return value;
+    }
+}
 
 public class Action extends Home implements ActionListener{
     
@@ -22,7 +39,7 @@ public class Action extends Home implements ActionListener{
     Scanner sc;
     JButton A, B, C, D;
     JButton backButton = new JButton("Back");
-    ArrayList<Pair<String, String>> list;
+    ArrayList<Pair> list;
     ArrayList<String> output, taken, mistake;
     Random rand;
     JTextField field = new JTextField();
@@ -38,8 +55,8 @@ public class Action extends Home implements ActionListener{
     final int N = 4;
     
     Action() throws FileNotFoundException, InterruptedException{
-//        file = new File("C:\\Users\\Tony Su\\Desktop\\Java\\MyPractice\\myPractice\\src\\FileOpen\\file");
-        file = new File("C:\\Users\\Tony Su\\Documents\\NetBeansProjects\\MyProject\\src\\myproject\\file");
+        
+        file = new File("src/myproject/file");
         
         A = setButton(0);
         B = setButton(1);
@@ -122,9 +139,6 @@ public class Action extends Home implements ActionListener{
         }else if(e.getSource() == SButton){
             page = 3;
             removeAllButton();
-//            question.setVisible(true);
-//            question.setText("To be Continue...");
-//            backButton.setVisible(true);
         }
         
         if(e.getSource() == A){
@@ -226,8 +240,8 @@ public class Action extends Home implements ActionListener{
             }
             Thread.sleep(300);
         }
+
         
-//        question.setText(Integer.toString(score) + "/" + Integer.toString(T));
         question.setText("Accuracy: " + score*100/T + "%");
         A.setVisible(false);
         B.setVisible(false);
@@ -303,7 +317,6 @@ public class Action extends Home implements ActionListener{
             Thread.sleep(300);
         }
         
-//        question.setText(Integer.toString(score) + "/" + Integer.toString(T));
         question.setText("Accuracy: " + score*100/T + "%");
         A.setVisible(false);
         B.setVisible(false);
@@ -317,7 +330,6 @@ public class Action extends Home implements ActionListener{
         
         question.setVisible(true);
         field.setVisible(true);
-//        backButton.setVisible(true);
         
         for(int i=1; i<=T; i++){
             done = false;
