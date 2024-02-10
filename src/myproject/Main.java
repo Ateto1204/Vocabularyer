@@ -7,8 +7,9 @@ package myproject;
 
 /**
  *
- * @author Tony Su
+ * @author Ateto
  */
+
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;

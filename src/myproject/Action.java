@@ -5,6 +5,10 @@
  */
 package myproject;
 
+/**
+ *
+ * @author Ateto
+ */
 
 import java.util.*;
 import java.awt.*;

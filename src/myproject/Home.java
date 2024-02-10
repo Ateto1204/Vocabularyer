@@ -7,7 +7,7 @@ package myproject;
 
 /**
  *
- * @author Tony Su
+ * @author Ateto
  */
 
 import java.awt.*;
