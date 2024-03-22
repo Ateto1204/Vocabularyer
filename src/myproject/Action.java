@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package myproject;
 
 /**
  *
  * @author Ateto
+ *
+ * Description: Action class
  */
 
 import java.util.*;
@@ -60,7 +57,7 @@ public class Action extends Home implements ActionListener{
     
     Action() throws FileNotFoundException, InterruptedException{
         
-        file = new File("src/myproject/file");
+        file = new File("./src/myproject/file");
         
         A = setButton(0);
         B = setButton(1);
