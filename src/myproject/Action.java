@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package myproject;
 
 /**
  *
  * @author Ateto
+ *
+ * Description: Action class
  */
 
 import java.util.*;
@@ -60,7 +57,7 @@ public class Action extends Home implements ActionListener{
     
     Action() throws FileNotFoundException, InterruptedException{
         
-        file = new File("src/myproject/file");
+        file = new File("./src/myproject/file");
         
         A = setButton(0);
         B = setButton(1);
@@ -330,19 +327,19 @@ public class Action extends Home implements ActionListener{
         backButton.setVisible(true);
     }
     
-    private void Spell() throws InterruptedException{
+    private void Spell() throws InterruptedException {
         
         question.setVisible(true);
         field.setVisible(true);
         
-        for(int i=1; i<=T; i++){
+        for(int i = 1; i <= T; i++) {
             done = false;
-            while(!done){
-                try{
+            while(!done) {
+                try {
                     idx = rand.nextInt() % list.size();
                     q = list.get(idx).getValue();
                     done = true;
-                }catch(ArrayIndexOutOfBoundsException e){
+                } catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println("again.");
                 }
             }
